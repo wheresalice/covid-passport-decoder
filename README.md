@@ -16,12 +16,12 @@ Note that you must use single quotes in step two because the string will probabl
 
 ## What am I seeing?
 
-I don't know.
+The data format is documented in https://ec.europa.eu/health/sites/default/files/ehealth/docs/covid-certificate_json_specification_en.pdf
 
-Clearly there's first and last name, and date of birth.  Some of the other fields are less clear
+but tl;dr it contains sensitive personal data including your name, date of birth, and vaccines received
 
 ## Can I generate my own?
 
 Yes and no.
 
-You can generate your own, but it won't be signed by the right authority so it should fail.
+You can generate your own, but it won't be signed by the right authority so it should fail when scanned
