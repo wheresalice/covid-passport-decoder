@@ -25,3 +25,7 @@ but tl;dr it contains sensitive personal data including your name, date of birth
 Yes and no.
 
 You can generate your own, but it won't be signed by the right authority so it should fail when scanned
+
+## Similar Projects
+
+This python script should do the same thing for the EU version with more checks, but also fails more easily https://github.com/ehn-dcc-development/ehn-sign-verify-python-trivial/blob/main/hc1_verify.py
