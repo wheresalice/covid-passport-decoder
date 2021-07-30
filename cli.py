@@ -6,7 +6,7 @@ import cbor
 import json
 from datetime import datetime
 
-qr_code = sys.argv[1]
+qr_code = sys.argv[1].strip()
 
 stripped = qr_code.split("HC1:")[1]
 base45_decoded = base45.b45decode(stripped)

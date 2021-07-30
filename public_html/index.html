@@ -1,0 +1,29 @@
+<html>
+<head>
+
+</head>
+<body>
+<video id="video"></video>
+<hr>
+<div id="raw"></div>
+<hr>
+<div id="decoded"></div>
+
+<script src="/js/qr-scanner.umd.min.js"></script>
+<script>
+    function handleQR(code) {
+        document.getElementById("raw").innerText = code;
+        fetch('/decode', {method:'POST', body: code})
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("decoded").innerText = JSON.stringify(data);
+            console.log(data);
+        })
+    }
+
+    QrScanner.WORKER_PATH = "/js/qr-scanner-worker.min.js"
+    const qrScanner = new QrScanner(document.getElementById("video"), result => handleQR(result.toString()));
+    qrScanner.start();
+</script>
+</body>
+</html>
